@@ -2,6 +2,8 @@ empt = document.forms["form1"]["name"].value;
 document.getElementById("btn1").onclick = function () {
     if (required()) {
         location.href = "/html/second.html";
+        
+
     }
 
 };
@@ -21,3 +23,4 @@ function required() {
         return true;
     }
 }
+
