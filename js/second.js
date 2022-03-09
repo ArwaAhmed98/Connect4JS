@@ -4,3 +4,9 @@ document.getElementById("level").onclick = function () {
 
 
 };
+document.getElementById("lvl2").onclick = function () {
+ 
+    location.href = "/html/gamePC.html";
+
+
+};

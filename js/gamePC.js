@@ -80,23 +80,30 @@ if (squares[y].classList.contains('taken') &&  squares[y].classList.contains('pl
     {
         return Math.floor(Math.random() * (max - min + 1)) + min
     }
-  
+    counter=0;
+    // var computerMove = Math.floor(generaterandom(counter,43)) ;
     for (let i = 0; i < squares.length; i++) {
       squares[i].onclick = () => {
         //if the square below your current square is taken, you can go ontop of it
         if (squares[i + 7].classList.contains('taken') &&!squares[i].classList.contains('taken')) {
-          if (currentPlayer == 1) {
+          // if (currentPlayer == 1) {
             squares[i].classList.add('taken')
             squares[i].classList.add('player-one')
-            currentPlayer = 2
+            // currentPlayer = 2
+            counter++
             displayCurrentPlayer.innerHTML = currentPlayer
-          } else if (currentPlayer == 2){
-            squares[i].classList.add('taken')
-            squares[i].classList.add('player-two')
-            currentPlayer = 1
-            displayCurrentPlayer.innerHTML = currentPlayer        
+          // } else if (currentPlayer == 2){
+            setTimeout(() => {
+                  computerMove = Math.floor(generaterandom(counter,43)) ;
+                  squares[computerMove].classList.add('taken')
+                  squares[computerMove].classList.add('player-two')
+                  // currentPlayer = 1
+                  displayCurrentPlayer.innerHTML = currentPlayer      
+                  counter++  
+            }, 500);
+            
           }   
-        } else alert('cant go here')
+        // } else alert('cant go here')
         check(i)
       }
     }
