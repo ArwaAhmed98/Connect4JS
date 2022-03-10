@@ -75,37 +75,78 @@ if (squares[y].classList.contains('taken') &&  squares[y].classList.contains('pl
 }
 
     }
+    
+    // console.log( document.getElementsByClassName('c0 ')[0] || document.getElementsByClassName('c7')[0] )
+// element = document.getElementsByTagName("div")
+// function check(){
+//   element.get
+//   if (element.className > computerMove) {
+//     computerMove=generaterandom()
 
-    function generaterandom(min, max)
+//   }
+// }
+
+    function generaterandom()
     {
-        return Math.floor(Math.random() * (max - min + 1)) + min
+        return Math.floor(Math.random() * 7) 
     }
+    function findX(i){
+      
+
+    }
+    
     counter=0;
+    pcTurn=0
+    arr = new Array();
+    // for 0 => 42
+    // document.querySelectorAll("[class^=c]")[i].classList[0].substring(1,2)
     // var computerMove = Math.floor(generaterandom(counter,43)) ;
-    for (let i = 0; i < squares.length; i++) {
+    for (let i = 0; i < 6; i++) {
+      // squares[ generaterandom(0,41) ].click()
       squares[i].onclick = () => {
+        if( squares[35+i].classList.contains("taken"))
+                  i=i+7
+        // alert(i)
+        arr.push(i)
+        // console.log(i)
+        var computerMove =  Math.floor(Math.random() * (i) ) 
         //if the square below your current square is taken, you can go ontop of it
-        if (squares[i + 7].classList.contains('taken') &&!squares[i].classList.contains('taken')) {
-          // if (currentPlayer == 1) {
+        if (squares[i + 7].classList.contains('taken') &&!squares[i].classList.contains('taken')
+        || squares[computerMove + 7].classList.contains('taken') &&!squares[computerMove].classList.contains('taken') ) {
+          if (currentPlayer == 1 && pcTurn == 0) {
             squares[i].classList.add('taken')
+            arr.push(i);
+            // i = t
             squares[i].classList.add('player-one')
-            // currentPlayer = 2
+            pcTurn=1
             counter++
+            currentPlayer=2
             displayCurrentPlayer.innerHTML = currentPlayer
-          // } else if (currentPlayer == 2){
-            setTimeout(() => {
-                  computerMove = Math.floor(generaterandom(counter,43)) ;
-                  squares[computerMove].classList.add('taken')
-                  squares[computerMove].classList.add('player-two')
-                  // currentPlayer = 1
-                  displayCurrentPlayer.innerHTML = currentPlayer      
-                  counter++  
-            }, 500);
+           
+          
+          }
+            else  if(pcTurn == 1 && currentPlayer==2){
+              // setInterval(()=>{
+          
+              // if(computerMove <  )
+                computerMove = Math.floor(generaterandom()) ;
+                if( ! arr.includes(computerMove)){
+                squares[computerMove].classList.add('taken')
+                squares[computerMove].classList.add('player-two')
+                currentPlayer = 1
+                displayCurrentPlayer.innerHTML = currentPlayer  
+                pcTurn=0    
+                counter++  
+                }
+              // },20)
             
-          }   
-        // } else alert('cant go here')
+      
+            }
+      
+          } 
         check(i)
       }
+     
     }
     
   })
