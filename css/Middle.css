@@ -38,8 +38,18 @@
       font-weight: bold;
       mix-blend-mode: multiply;
   }
-  .text h1 ,  span {
+  .text h1  {
       font-size: 8rem;
       font-weight: 900;
+      bottom: 70%;
+      left:15%;
+      position: fixed;
 
+  }
+  .text span{
+    font-size: 8rem;
+    font-weight: 900;
+    bottom: 68%;
+    left:55%;
+    position: fixed;
   }

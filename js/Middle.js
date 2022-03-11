@@ -3,10 +3,11 @@
 // document.getElementById("info").innerHTML=name;
 
 
-var name=document.cookie.split(";")[0].split("=")[1];
-document.getElementById("FormInfo").innerHTML=name;
+//var name=document.cookie.split(";")[0].split("=")[1];
+//document.getElementById("FormInfo").innerHTML=name;
 
-
+t = localStorage.getItem("empt")
+document.getElementById("info").innerHTML= t;
 
 document.getElementById("btn1").onclick = function () {
  

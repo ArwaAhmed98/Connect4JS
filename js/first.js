@@ -24,7 +24,8 @@ linkToPage1.addEventListener("click", function(e){
 document.getElementById("start").onclick = function () {
     if (required()) {
         location.href = "/html/Middle.html";
-        
+        plyerName = document.getElementById("name").value
+        localStorage.setItem("empt",plyerName);
 
     }
 
