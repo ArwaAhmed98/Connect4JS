@@ -1,4 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+  font-family: 'Pacifico', cursive;
+  /* overflow-y: hidden; */
+  color: white;
+  /* margin: 0; */
+
+}
+h3{
+  text-align: center;
+  color: white;
+/* margin-top: 10px;
+padding-bottom: 0.64em; */
+  font-size: 2em;
+  /* color: rgb(9, 110, 110); */
+}
+body{
+  background: linear-gradient(45deg, black 10%, rgb(54, 194, 194));
+}
 .grid {
+  /* margin-top: 50px; */
   border: 1px solid;
   height: 600px;
   width: 700px;
@@ -6,7 +26,12 @@
   flex-wrap: wrap;
   margin: auto;
 }
-
+.all{
+  /* border: 1px solid black; */
+  /* background-color: aqua; */
+  border-radius: 50%;
+  background-color: aqua;
+}
 .grid div {
   height: 100px;
   width: 100px;
