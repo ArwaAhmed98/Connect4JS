@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+  }
+ 
+  #myVideo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;  
+    /* min-height: 100%;
+  }
+  .content {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    /* mix-blend-mode: multiply; */
+    /* width: 100%; */
+    /* padding: 20px; */
+  }
+  #start{
+      /* position: absolute; */
+      /* top: 10em; */
+  }
+  .text{
+      position: absolute;
+     top: 0;
+     left: 0;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* font-size: 5rem; */
+      font-weight: bold;
+      mix-blend-mode: multiply;
+  }
+  .text h1 ,  span {
+      font-size: 8rem;
+      font-weight: 900;
+
+  }

@@ -1,17 +1,29 @@
+var linkToPage1 = document.getElementById("start")  
+if(linkToPage1){
+linkToPage1.addEventListener("click", function(e){
+ e.preventDefault();
+    if(location.search){ 
+         window.location.href = "Middle.html" + location.search;
+     }
+ });
+
+
+}
+
+
+
+
 empt = document.forms["form1"]["name"].value;
-document.getElementById("btn1").onclick = function () {
-    if (required()) {
-        location.href = "/html/second.html";
+// document.getElementById("start").onclick = function () {
+//     if (required()) {
+//         location.href = "/html/Middle.html";
         
 
-    }
+//     }
 
-};
-document.getElementById("btn2").onclick = function () {
-    if (required()) {
-        location.href = "/html/second.html";
-    }
-};
+// };
+
+
 function required() {
     empt = document.forms["form1"]["name"].value;
     if (empt == "") {
