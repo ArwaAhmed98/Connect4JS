@@ -13,7 +13,14 @@ linkToPage1.addEventListener("click", function(e){
 
 
 
-empt = document.forms["form1"]["name"].value;
+// empt = document.forms["form1"]["name"].value;
+// document.querySelector("input[type='submit']").onclick = function(){
+// var userinput = document.querySelector("input[name='fname']").value;  
+// var expiredate = new Date();
+// expiredate.setFullYear(expiredate.getFullYear() + 1);
+// expireDate_cookie = "expires = " + expiredate;
+// document.cookie = "Username=" + userinput 
+// }
 document.getElementById("start").onclick = function () {
     if (required()) {
         location.href = "/html/Middle.html";
