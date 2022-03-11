@@ -1,36 +1,22 @@
 .grid {
-    border: 1px solid;
-    height: 600px;
-    width: 700px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-  }
-  
-  .grid div {
-    height: 100px;
-    width: 100px;
-    
-    /* background-color: blue; */
-  }
-  .bg{
-    background-color: blue;
-  }
-  .circle{
-    /* height: 100px;
-    width: 100px; */
-    background-color: white;
-    border-radius: 50%;
-  }
+  border: 1px solid;
+  height: 120px;
+  width: 140px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .player-one {
-    background-color: red;
-    border-radius: 50%;
-    
-  }
-  
-  .player-two {
-    background-color: yellow;
-    border-radius:  50%;
-  }
- 
+.grid div {
+  height: 20px;
+  width: 20px;
+}
+
+.player-one {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.player-two {
+  background-color: blue;
+  border-radius: 10px;
+}

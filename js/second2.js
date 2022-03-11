@@ -7,7 +7,7 @@ document.getElementById("level").onclick = function () {
 };
 document.getElementById("lvl2").onclick = function () {
  
-    location.href = "/html/gameUSRvsUSRlvl2.html";
+    location.href = "/html/gameUSRlevel2.html";
 
 
 };

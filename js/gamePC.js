@@ -76,9 +76,35 @@ if (squares[y].classList.contains('taken') &&  squares[y].classList.contains('pl
 
   }
 
-  function generaterandom(min, max)
+  function generaterandom()
   {
-      return Math.floor(Math.random() * (max - min + 1)) + min
+      return Math.floor(Math.random() * (41 - 0 + 1)) + 0
+  }
+  // if the number under ther number we want to color it 
+  console.log(generaterandom())
+  //******************* 
+
+  function pcTurn(){
+    var randomNumber = generaterandom();
+    var flag = 1
+    displayCurrentPlayer.innerHTML = "TEst"
+      while (flag)
+      if (squares[randomNumber + 7].classList.contains('taken') && !squares[randomNumber].classList.contains('taken')) {
+        
+          squares[randomNumber].classList.add('taken')
+          squares[randomNumber].classList.add('player-two')
+          
+          flag = 0
+          check(randomNumber)
+
+        
+      } else {
+
+        randomNumber = generaterandom();
+
+      }
+      
+       
   }
 
   for (let i = 0; i < squares.length; i++) {
@@ -88,14 +114,11 @@ if (squares[y].classList.contains('taken') &&  squares[y].classList.contains('pl
         if (currentPlayer == 1) {
           squares[i].classList.add('taken')
           squares[i].classList.add('player-one')
-          currentPlayer = 2
+          // console.log("player one : "+ i)
           displayCurrentPlayer.innerHTML = currentPlayer
-        } else if (currentPlayer == 2){
-          squares[i].classList.add('taken')
-          squares[i].classList.add('player-two')
-          currentPlayer = 1
-          displayCurrentPlayer.innerHTML = currentPlayer        
-        }   
+          pcTurn()
+          
+        } 
       } else alert('cant go here')
       check(i)
     }

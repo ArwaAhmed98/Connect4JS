@@ -14,14 +14,14 @@ linkToPage1.addEventListener("click", function(e){
 
 
 empt = document.forms["form1"]["name"].value;
-// document.getElementById("start").onclick = function () {
-//     if (required()) {
-//         location.href = "/html/Middle.html";
+document.getElementById("start").onclick = function () {
+    if (required()) {
+        location.href = "/html/Middle.html";
         
 
-//     }
+    }
 
-// };
+};
 
 
 function required() {
